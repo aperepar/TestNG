@@ -80,7 +80,7 @@ public class HeladerasPage extends Global {
 		List<WebElement> elements = driver.findElements(
 				By.xpath("//article[@class='PieceLayout-orsj2a-0 PieceLayout__ResponsiveLayout-orsj2a-3 GKcLt']"));
 
-		List<String> names = new ArrayList<>();
+		List<String> names = new ArrayList<String>();
 
 		for (WebElement element : elements) {
 			names.add(element.getText());
