@@ -1,0 +1,11 @@
+# fravega-autom-ui
+
+Se crean compilados de pruebas UI usando Maven,Java y herramientas de pruebas como TestNG, Junit y RestAssured 
+y discriminando las pantallas involucradas en las pruebas por el patrón Page Object.
+
+En la ruta "/fravega-ui/src/test/resources/suites" se encuentra el archivo "FravegaSuite.xml" desde donde se ejecutan (Run As/ TestNG Suite)las pruebas 
+contenidas en "FravegaTest.java" correspondiente a la prueba de interfaz y "ApiRestFravegaTest.java" para la prueba de Backend.
+Está configurado por defecto el webDriver Chrome, igualmente en la ruta "/fravega-ui/src/test/resources/webDrivers" se encuentra el archivo geckoDriver.exe para
+la ejecución con el navegador Firefox.
+
+Al finarlizar las pruebas se genera carpeta "test-output" con reportes y log de las mismas.

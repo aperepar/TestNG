@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Portal.Fravega">
+
+	<parameter name="selenium.url" value="https://www.fravega.com" />
+
+	<test name="1-Buscar-Filtrar producto- Fravega" preserve-order="true">
+		<parameter name="selenium.driver" value="chromedriver.exe" />
+		<parameter name="dataProvider" value="fravega_dataProvider.xlsx" />
+		<parameter name="sheet" value="Buscar-Filtrar producto" />
+		<classes>
+			<class name="Portal.FravegaTest">
+				<methods>
+					<include name="searchAndFilter" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="2-Test Backend - Fravega" preserve-order="true">
+		<classes>
+			<class name="Portal.ApiRestFravegaTest">
+				<methods>
+					<include name="apiRestTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>
